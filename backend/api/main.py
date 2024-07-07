@@ -31,13 +31,23 @@ CLASS_NAMES = ['A', 'B', 'Blank', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 async def pring():
     return "It's aliiiiive!!"
 
+def preprocess_image(image, target_size):
+    if image.mode != "RGB":
+        image = image.convert("RGB")
+    
+    processed_image = image.resize(target_size)
+    
+    return processed_image
+
 
 # API POST endpoint
 @app.post("/predict")
 async def predict(file: UploadFile=File(...)):
     print("File received...")
-    image = np.array(Image.open(BytesIO(await file.read())))
-    img_batch = np.expand_dims(image, 0)
+    image = Image.open(BytesIO(await file.read()))
+    processed_image = preprocess_image(image, target_size=(256, 256))
+    processed_image = np.array(processed_image)
+    img_batch = np.expand_dims(processed_image, 0)
     
     predictions = MODEL.predict(img_batch)
 
