@@ -1,9 +1,10 @@
-### Datasets
+# Datasets
 I used a combination of two datasets from Kaggle, [Hand Sign Images](https://www.kaggle.com/datasets/ash2703/handsignimages) and the images for "space" from [Synthetic ASL Alphabet](https://www.kaggle.com/datasets/lexset/synthetic-asl-alphabet)
 
-### Model
+# Model
 I used a template from [codebasics](https://github.com/codebasics/potato-disease-classification/blob/main/training/potato-disease-classification-model.ipynb) to set up my CNN training model
 
+# How to set up
 ### Set up virtual environment
 1. Install the virtual environment `python3.11 -m venv .env`
 2. Activate the environment in your shell `source .env/bin/activate`

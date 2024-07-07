@@ -2,4 +2,4 @@ ipykernel
 tensorflow
 matplotlib
 numpy
-flask
+fastapi
