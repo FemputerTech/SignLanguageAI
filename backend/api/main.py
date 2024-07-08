@@ -22,7 +22,7 @@ app.add_middleware(
 )
 
 VERSION = 1
-PATH = os.path.join(os.path.dirname(__file__), "..", "saved_models", f"asl_{VERSION}.keras")
+PATH = os.path.join(os.path.dirname(__file__), "..", "training/saved_models", f"asl_{VERSION}.keras")
 MODEL = tf.keras.models.load_model(PATH)
 CLASS_NAMES = ['A', 'B', 'Blank', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'Space', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
