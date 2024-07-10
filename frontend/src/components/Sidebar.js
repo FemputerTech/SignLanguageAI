@@ -1,14 +1,16 @@
 import React from "react";
 import "../styles/Sidebar.css";
-import { SidebarData } from "./SidebarData";
-import { Scrollbars } from "react-custom-scrollbars-2";
+import { Categories, Favorites } from "./SidebarData";
+// import { Scrollbars } from "react-custom-scrollbars-2";
 
 function Sidebar() {
   return (
-    <div className="Sidebar">
-      <div className="favoritesSidebar">
-        <ul className="SidebarList">
-          {SidebarData.filter((value) => value.section === "favorites").map(
+    <div id="sidebar">
+      <div id="logo">Logo</div>
+      <div id="favorites">
+        <div class="sidebar-section">Favorites</div>
+        <ul id="favorites-list" class="sidebar-list">
+          {Favorites.map(
             (value, key) => {
               return (
                 <li
@@ -19,17 +21,18 @@ function Sidebar() {
                     window.location.pathname = value.link;
                   }}
                 >
-                  <div id="icon">{value.icon}</div>
-                  <div id="title">{value.title}</div>
+                  <div className="sidebar-icon">{value.icon}</div>
+                  <div className="sidebar-title">{value.title}</div>
                 </li>
               );
             }
           )}
         </ul>
       </div>
-      <div className="mainSidebar">
-        <ul className="SidebarList">
-          {SidebarData.filter((value) => value.section === "main").map(
+      <div id="categories">
+        <div class="sidebar-section">Categories</div>
+        <ul id="categories-list" class="sidebar-list">
+          {Categories.map(
             (value, key) => {
               return (
                 <li
@@ -40,8 +43,8 @@ function Sidebar() {
                     window.location.pathname = value.link;
                   }}
                 >
-                  <div id="icon">{value.icon}</div>
-                  <div id="title">{value.title}</div>
+                  <div className="sidebar-icon">{value.icon}</div>
+                  <div className="sidebar-title">{value.title}</div>
                 </li>
               );
             }
