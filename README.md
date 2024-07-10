@@ -22,8 +22,9 @@ I used a template from [codebasics](https://github.com/codebasics/potato-disease
 
 1. Initialize react by running `npx create-react-app frontend --use-npm`
 2. cd into the frontend directory
-3. Start the development server by running `npm start`
-4. To bundle the app for production run `npm run build`
+3. Iif you need to reinstall the dependencies run `npm install` or `npm i`
+4. Start the development server by running `npm start`
+5. To bundle the app for production run `npm run build`
 
 ### Changing the website title
 
