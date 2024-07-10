@@ -14,8 +14,18 @@ export const Favorites = [
     title: "Random",
     icon: "",
     link: "",
-  }
-]
+  },
+  {
+    title: "Vowel",
+    icon: "",
+    link: "",
+  },
+  {
+    title: "Consonant",
+    icon: "",
+    link: "",
+  },
+];
 
 export const Categories = [
   {
