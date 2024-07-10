@@ -6,7 +6,7 @@ I used a combination of two datasets from Kaggle, [Hand Sign Images](https://www
 
 ## Icons
 
-I made the icons using the [ASL printable poster](https://teachbesideme.com/asl-alphabet-printable-chart-and-flashcards/) from Teach Beside Me
+I purchased these icons fron [TheHatchedCottage](https://www.etsy.com/listing/1104909056/asl-alphabet-svg-american-sign-language?click_key=2ae604896a150ace2e9f598b41724f667c08e43d%3A1104909056&click_sum=f62eab80&ga_search_query=asl&ref=shop_items_search_1&crt=1) on Etsy.
 
 ## Model
 
