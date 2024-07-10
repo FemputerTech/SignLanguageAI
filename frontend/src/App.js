@@ -1,8 +1,9 @@
 import "./App.css";
 import { Helmet } from "react-helmet";
-import ImageForm from "./components/ImageForm";
+// import ImageForm from "./components/ImageForm";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 
 function App() {
   return (
@@ -16,9 +17,12 @@ function App() {
         </Helmet>
       </header>
       <div id="container">
-        <Sidebar />
+        <div id="sidebar-wrapper">
+          <Sidebar />
+        </div>
         <div id="main">
           <Navbar />
+          <Header />
           {/* <ImageForm /> */}
         </div>
       </div>
