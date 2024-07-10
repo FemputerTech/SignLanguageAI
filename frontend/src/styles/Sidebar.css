@@ -4,15 +4,18 @@
   --sidebar-width: 200px;
   --sidebar-border: 1px solid #b3bab3;
   --sidebar-logo-height: 70px;
-  --sidebar-item-height: 52px;
+  --sidebar-item-height: 48px;
   --sidebar-background-color-hover: #cad1c9;
   --sidebar-active: #b3bab3;
 }
 
 #sidebar {
+  position: fixed;
   background-color: var(--sidebar-background-color);
   overflow-y: auto;
   width: var(--sidebar-width);
+  top: 0;
+  bottom: 0;
 }
 
 #logo {
@@ -55,13 +58,14 @@
   flex-direction: row;
   align-items: center;
   list-style-type: none;
-  padding: 10px;
   width: 100%;
   height: var(--sidebar-item-height);
 }
 
 .sidebar-list .item .sidebar-icon {
   margin-right: 20px;
+  margin-left: 10px;
+  height: 100%;
 }
 
 .sidebar-list .item:hover {
