@@ -20,6 +20,13 @@ I used a template from [codebasics](https://github.com/codebasics/potato-disease
 4. Install dependencies `pip3 install -r requirements.txt`
 5. Select the python interpreter for the virtual environment and select it in the jupyter notebook (top right side)
 
+## Setup Kaggle
+
+1. Go to [Kaggle](https://www.kaggle.com/)
+2. Click on your account in the right hand corner and go to settings
+3. Scroll down to API and select Create New Token, this will download a kaggle.json file
+4. mv the kaggle.json to the `.kaggle` directory that was created
+
 ## Getting Started with React App
 
 ### Setup
