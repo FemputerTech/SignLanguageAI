@@ -2,4 +2,3 @@
 __pycache__
 .DS_Store
 backend/training/asl_alphabet_data
-backend/training/asl_alphabet_data.zip
