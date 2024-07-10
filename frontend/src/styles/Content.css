@@ -1,0 +1,39 @@
+:root {
+  --content-background-color: #dae3d9;
+}
+
+#content {
+  background-color: var(--content-background-color);
+  flex: 1;
+  height: 100vh;
+}
+
+#content-title {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 250px);
+  grid-auto-rows: var(--row-increment);
+  justify-content: center;
+  margin: 20px;
+  gap: 20px;
+}
+
+.card {
+  background-color: #838383;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 250px;
+  height: 300px;
+}
+
+.card-title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}

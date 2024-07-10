@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
+import Content from "./components/Content";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <div id="main">
           <Navbar />
           <Header />
+          <Content />
           {/* <ImageForm /> */}
         </div>
       </div>
