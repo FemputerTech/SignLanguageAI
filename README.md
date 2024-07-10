@@ -13,7 +13,7 @@ I used a template from [codebasics](https://github.com/codebasics/potato-disease
 1. Install the virtual environment `python3.11 -m venv .env`
 2. Activate the environment in your shell `source .env/bin/activate`
 3. Verify the python version `python3 --version`
-4. Install dependencies `pip3 install -r backend/requirements.txt`
+4. Install dependencies `pip3 install -r requirements.txt`
 5. Select the python interpreter for the virtual environment and select it in the jupyter notebook (top right side)
 
 ## Getting Started with React App
