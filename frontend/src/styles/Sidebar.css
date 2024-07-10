@@ -1,6 +1,11 @@
 .Sidebar {
-  width: 150px;
+  width: 200px;
   background-color: #dae3d9;
+}
+
+.favoritesSidebar,
+.mainSidebar {
+  border-top: 1px solid gray;
 }
 
 .SidebarList {
