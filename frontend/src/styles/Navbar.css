@@ -1,0 +1,53 @@
+:root {
+  --navbar-background-color: #9e9e9e;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--navbar-background-color);
+  height: 50px;
+}
+
+nav #search {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+nav #search:hover {
+  color: purple;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style-type: none;
+  flex: 1;
+  padding: 0;
+  height: 100%;
+}
+
+nav ul li {
+  display: inline-block;
+  height: 100%;
+}
+
+nav ul li a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+nav ul li a:hover {
+  background-color: darkgray;
+}
