@@ -1,9 +1,6 @@
-* {
-  box-sizing: border-box;
-}
-
 #sidebar {
   background-color: #dae3d9;
+  overflow-y: auto;
   width: 200px;
 }
 
