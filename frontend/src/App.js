@@ -2,6 +2,7 @@ import "./App.css";
 import { Helmet } from "react-helmet";
 import ImageForm from "./components/ImageForm";
 import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
@@ -14,8 +15,13 @@ function App() {
           <meta name="description" content="Sign Language AI App" />
         </Helmet>
       </header>
-      <Sidebar />
-      <ImageForm />
+      <div id="container">
+        <Sidebar />
+        <div id="main">
+          <Navbar />
+          {/* <ImageForm /> */}
+        </div>
+      </div>
     </div>
   );
 }
