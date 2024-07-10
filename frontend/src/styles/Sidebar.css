@@ -1,20 +1,31 @@
+:root {
+  /* Light Mode */
+  --sidebar-background-color: #dae3d9;
+  --sidebar-width: 200px;
+  --sidebar-border: 1px solid #b3bab3;
+  --sidebar-logo-height: 70px;
+  --sidebar-item-height: 68px; /*40*/
+  --sidebar-background-color-hover: #cad1c9;
+  --sidebar-active: #b3bab3;
+}
+
 #sidebar {
-  background-color: #dae3d9;
+  background-color: var(--sidebar-background-color);
   overflow-y: auto;
-  width: 200px;
+  width: var(--sidebar-width);
 }
 
 #logo {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid darkgray;
+  border-bottom: var(--sidebar-border);
   padding: 10px;
-  height: 70px;
+  height: var(--sidebar-logo-height);
 }
 
 #favorites {
-  border-bottom: 1px solid darkgray;
+  border-bottom: var(--sidebar-border);
   padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -46,7 +57,7 @@
   list-style-type: none;
   padding: 10px;
   width: 100%;
-  height: 68px;
+  height: var(--sidebar-item-height);
 }
 
 .sidebar-list .item .sidebar-icon {
@@ -55,9 +66,9 @@
 
 .sidebar-list .item:hover {
   cursor: pointer;
-  background-color: #cad1c9;
+  background-color: var(--sidebar-background-color-hover);
 }
 
 .sidebar-list #active {
-  background-color: #b3bab3;
+  background-color: var(--sidebar-active);
 }
