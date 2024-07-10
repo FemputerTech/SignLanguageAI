@@ -2,7 +2,7 @@
 
 ## Datasets
 
-I used a combination of two datasets from Kaggle, [Hand Sign Images](https://www.kaggle.com/datasets/ash2703/handsignimages) and the images for "space" from [Synthetic ASL Alphabet](https://www.kaggle.com/datasets/lexset/synthetic-asl-alphabet)
+I used a datasets from Kaggle [Synthetic ASL Alphabet](https://www.kaggle.com/datasets/lexset/synthetic-asl-alphabet)
 
 ## Icons
 
