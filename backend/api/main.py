@@ -28,7 +28,7 @@ CLASS_NAMES = ['A', 'B', 'Blank', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', '
 
 # API GET endpoint
 @app.get("/ping")
-async def pring():
+async def ping():
     return "It's aliiiiive!!"
 
 def preprocess_image(image, target_size):
