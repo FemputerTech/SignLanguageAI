@@ -25,9 +25,11 @@ function App() {
         </div>
         <div id="main">
           <Navbar />
-          <Header imageURL={selectedImage} />
-          <Content onImageSelection={setSelectedImage} />
-          {/* <ImageForm /> */}
+          <div id="content-wrapper">
+            <Header imageURL={selectedImage} />
+            <Content onImageSelection={setSelectedImage} />
+            {/* <ImageForm /> */}
+          </div>
         </div>
       </div>
     </div>
