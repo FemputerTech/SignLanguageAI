@@ -8,7 +8,6 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 
 function App() {
-  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div className="App">
       <header className="App-header">
@@ -26,8 +25,8 @@ function App() {
         <div id="main">
           <Navbar />
           <div id="content-wrapper">
-            <Header imageURL={selectedImage} />
-            <Content onImageSelection={setSelectedImage} />
+            <Header />
+            <Content />
             {/* <ImageForm /> */}
           </div>
         </div>

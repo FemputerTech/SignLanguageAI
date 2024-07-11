@@ -1,10 +1,9 @@
 import React from "react";
+import axios from "axios";
 import "../styles/Header.css";
 
-function Header({ imageURL }) {
-  return (
-    <div id="header">{imageURL && <img src={imageURL} alt="Selected" />}</div>
-  );
+function Header() {
+  return <div id="header"></div>;
 }
 
 export default Header;
