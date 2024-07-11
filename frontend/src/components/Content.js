@@ -24,9 +24,13 @@ function Content() {
       <h1 id="content-title">Content</h1>
       <div className="card-container">
         {images.map((image, index) => (
-          <div key={index} className="image-card">
-            <img src={image.url} alt={`Signed letter ${image.letter}`} />
-          </div>
+          <article key={index} className="card">
+            <img
+              className="card-image"
+              src={image.url}
+              alt={`Signed letter ${image.letter}`}
+            />
+          </article>
         ))}
       </div>
     </div>
