@@ -20,26 +20,26 @@ function Content() {
     fetchImages();
   }, []);
 
-  const downloadImage = async (imageUrl, filename = "tmp_image.png") => {
-    try {
-      const response = await axios.get(
-        `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/download-image?image_url=${encodeURIComponent(
-          imageUrl
-        )}`,
-        {
-          responseType: "blob", // Important: responseType as blob
-        }
-      );
+  // const downloadImage = async (imageUrl, filename = "tmp_image.png") => {
+  //   try {
+  //     const response = await axios.get(
+  //       `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/download-image?image_url=${encodeURIComponent(
+  //         imageUrl
+  //       )}`,
+  //       {
+  //         responseType: "blob", // Important: responseType as blob
+  //       }
+  //     );
 
-      if (!response.data) {
-        throw new Error(`Empty response received`);
-      }
+  //     if (!response.data) {
+  //       throw new Error(`Empty response received`);
+  //     }
 
-      saveAs(response.data, filename);
-    } catch (error) {
-      console.error("Error downloading image:", error);
-    }
-  };
+  //     saveAs(response.data, filename);
+  //   } catch (error) {
+  //     console.error("Error downloading image:", error);
+  //   }
+  // };
 
   const sendImage = async (imageUrl) => {
     try {
