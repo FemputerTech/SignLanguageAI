@@ -1,13 +1,19 @@
 import "./App.css";
 import React, { useState } from "react";
 import { Helmet } from "react-helmet";
-// import ImageForm from "./components/ImageForm";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
 import Header from "./components/Header";
 import Content from "./components/Content";
 
 function App() {
+  const [selectedImageUrl, setSelectedImageUrl] = useState("");
+
+  const handleImageClick = (imageUrl) => {
+    console.log("handling the image:", imageUrl);
+    setSelectedImageUrl(imageUrl);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -25,9 +31,8 @@ function App() {
         <div id="main">
           <Navbar />
           <div id="content-wrapper">
-            <Header />
-            <Content />
-            {/* <ImageForm /> */}
+            <Header selectedImageUrl={selectedImageUrl} />
+            <Content onImageClick={handleImageClick} />
           </div>
         </div>
       </div>
