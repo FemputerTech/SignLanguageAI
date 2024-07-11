@@ -3,16 +3,15 @@ import axios from "axios";
 import "../styles/Content.css";
 
 function Content() {
-  const [image, setImage] = useState(null);
+  const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
       try {
         let response = await axios.get(
-          "https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/random"
+          "https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/randoms"
         );
-        console.log("image url:", response.data.url);
-        setImage(response.data.url);
+        setImages(response.data);
       } catch (error) {
         console.error("Error fetching images:", error);
       }
@@ -24,7 +23,11 @@ function Content() {
     <div id="content">
       <h1 id="content-title">Content</h1>
       <div className="card-container">
-        <img src={image} alt="a signed letter" />
+        {images.map((image, index) => (
+          <div key={index} className="image-card">
+            <img src={image.url} alt={`Signed letter ${image.letter}`} />
+          </div>
+        ))}
       </div>
     </div>
   );
