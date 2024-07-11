@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Content.css";
 
-function Content() {
+function Content({ onImageSelection }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -24,7 +24,11 @@ function Content() {
       <h1 id="content-title">Content</h1>
       <div className="card-container">
         {images.map((image, index) => (
-          <article key={index} className="card">
+          <article
+            key={index}
+            className="card"
+            onClick={() => onImageSelection(image.url)}
+          >
             <img
               className="card-image"
               src={image.url}

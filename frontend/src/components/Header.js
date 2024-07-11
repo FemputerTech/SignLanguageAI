@@ -1,8 +1,10 @@
 import React from "react";
 import "../styles/Header.css";
 
-function Header() {
-  return <div id="header">Header</div>;
+function Header({ imageURL }) {
+  return (
+    <div id="header">{imageURL && <img src={imageURL} alt="Selected" />}</div>
+  );
 }
 
 export default Header;

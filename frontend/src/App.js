@@ -1,4 +1,5 @@
 import "./App.css";
+import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 // import ImageForm from "./components/ImageForm";
 import Sidebar from "./components/Sidebar";
@@ -7,6 +8,7 @@ import Header from "./components/Header";
 import Content from "./components/Content";
 
 function App() {
+  const [selectedImage, setSelectedImage] = useState(null);
   return (
     <div className="App">
       <header className="App-header">
@@ -23,8 +25,8 @@ function App() {
         </div>
         <div id="main">
           <Navbar />
-          <Header />
-          <Content />
+          <Header imageURL={selectedImage} />
+          <Content onImageSelection={setSelectedImage} />
           {/* <ImageForm /> */}
         </div>
       </div>
