@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { saveAs } from "file-saver";
+// import { saveAs } from "file-saver";
 import axios from "axios";
 import "../styles/Content.css";
 
-function Content() {
+function Content({ onImageClick }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
@@ -19,6 +19,13 @@ function Content() {
     };
     fetchImages();
   }, []);
+
+  // Passing the imageURL to the parent component
+  const handleImageClick = (imageUrl) => {
+    if (onImageClick) {
+      onImageClick(imageUrl);
+    }
+  };
 
   // const downloadImage = async (imageUrl, filename = "tmp_image.png") => {
   //   try {
@@ -41,21 +48,6 @@ function Content() {
   //   }
   // };
 
-  const sendImage = async (imageUrl) => {
-    try {
-      let response = await axios.post(
-        `http://localhost:8000/predict?image_url=${encodeURIComponent(
-          imageUrl
-        )}`
-        // Alternatively, you can send it in the request body:
-        // { image_url: imageUrl }
-      );
-      console.log("Response:", response.data);
-    } catch (error) {
-      console.error("Error sending image for prediction:", error);
-    }
-  };
-
   return (
     <div id="content">
       <h1 id="content-title">Content</h1>
@@ -64,7 +56,7 @@ function Content() {
           <article
             key={index}
             className="card"
-            onClick={() => sendImage(image.url)}
+            onClick={() => handleImageClick(image.url)}
           >
             <img
               className="card-image"
