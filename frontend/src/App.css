@@ -59,14 +59,10 @@ body {
   font-variation-settings: "wdth" 100, "YTLC" 500;
 }
 
+/************ Layout ************/
 #container {
   display: flex;
   height: 100%;
-}
-
-#sidebar-wrapper {
-  display: flex;
-  width: 200px;
 }
 
 #main {

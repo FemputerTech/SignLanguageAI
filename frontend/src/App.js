@@ -37,13 +37,11 @@ function App() {
         </Helmet>
       </header>
       <div id="container">
-        <div id="sidebar-wrapper">
-          <Sidebar
-            onLetterClick={handleLetterClick}
-            onFavoriteClick={handleFavoriteClick}
-          />
-        </div>
-        <div id="main">
+        <Sidebar
+          onLetterClick={handleLetterClick}
+          onFavoriteClick={handleFavoriteClick}
+        />
+        {/* <div id="main">
           <Navbar />
           <div id="content-wrapper">
             <Header
@@ -56,7 +54,7 @@ function App() {
               selectedLetter={selectedLetter}
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
