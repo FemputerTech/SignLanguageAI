@@ -42,7 +42,7 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
         src={selectedImageUrl}
         alt="Selected asl letter"
       />
-      <button id="predict-button" onClick={() => sendImage()}>
+      {/* <button id="predict-button" onClick={() => sendImage()}>
         Predict
       </button>
       <p>Prediction</p>
@@ -52,7 +52,7 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
       <p>Confidence</p>
       <p>
         <span id="confidence">{confidence}</span>
-      </p>
+      </p> */}
     </div>
   );
 }
