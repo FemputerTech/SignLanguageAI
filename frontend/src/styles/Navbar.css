@@ -46,9 +46,10 @@ nav ul li a {
 }
 
 .nav-link {
-  color: white;
+  color: #e8e8e8;
 }
 
 nav ul li a:hover {
   background-color: var(--navbar-link-hover);
+  color: #d6d6d6;
 }

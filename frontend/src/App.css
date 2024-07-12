@@ -18,8 +18,7 @@
   /* Navbar */
   --navbar-background-color: #147ba3;
   --navbar-height: 60px;
-  --navbar-search-hover: green;
-  --navbar-link-hover: darkgray;
+  /* --navbar-link-hover: #106586; */
 
   /* Preview */
   --preview-height: 400px;
