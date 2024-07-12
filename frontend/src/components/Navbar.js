@@ -1,10 +1,13 @@
 import React from "react";
+import Dark from "../assets/dark.svg";
 import "../styles/Navbar.css";
 
 function Navbar() {
   return (
     <nav>
-      <div id="search">Search</div>
+      <div id="mode">
+        <img class="mode-image" src={Dark} alt="Switch to dark mode" />
+      </div>
       <ul>
         <li>
           <a href="/">Home</a>

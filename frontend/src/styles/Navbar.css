@@ -4,17 +4,24 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: var(--navbar-background-color);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: var(--navbar-height);
   left: var(--sidebar-width);
   right: 0;
 }
 
-nav #search {
-  padding: 0 20px;
+nav #mode {
+  font-size: 0;
+  padding: 0 40px;
 }
 
-nav #search:hover {
-  color: var(--navbar-search-hover);
+.mode-image {
+  width: 16px;
+  height: 16px;
+}
+
+.mode-image:hover {
+  content: url("../assets/dark-hover.svg");
 }
 
 nav ul {
