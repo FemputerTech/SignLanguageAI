@@ -8,10 +8,16 @@ import Content from "./components/Content";
 
 function App() {
   const [selectedImageUrl, setSelectedImageUrl] = useState("");
+  const [selectedLetter, setSelectedLetter] = useState("");
 
   const handleImageClick = (imageUrl) => {
     console.log("handling the image:", imageUrl);
     setSelectedImageUrl(imageUrl);
+  };
+
+  const handleLetterClick = (letter) => {
+    console.log("handling the letter:", letter);
+    setSelectedLetter(letter);
   };
 
   return (
@@ -26,13 +32,16 @@ function App() {
       </header>
       <div id="container">
         <div id="sidebar-wrapper">
-          <Sidebar />
+          <Sidebar onLetterClick={handleLetterClick} />
         </div>
         <div id="main">
           <Navbar />
           <div id="content-wrapper">
             <Header selectedImageUrl={selectedImageUrl} />
-            <Content onImageClick={handleImageClick} />
+            <Content
+              onImageClick={handleImageClick}
+              selectedLetter={selectedLetter}
+            />
           </div>
         </div>
       </div>

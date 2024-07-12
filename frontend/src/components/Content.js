@@ -3,22 +3,34 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Content.css";
 
-function Content({ onImageClick }) {
+function Content({ onImageClick, selectedLetter }) {
   const [images, setImages] = useState([]);
 
   useEffect(() => {
     const fetchImages = async () => {
-      try {
-        let response = await axios.get(
-          "https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/randoms"
-        );
-        setImages(response.data);
-      } catch (error) {
-        console.error("Error fetching images:", error);
+      console.log("Letter:", selectedLetter);
+      if (selectedLetter) {
+        try {
+          let response = await axios.get(
+            `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/${selectedLetter}`
+          );
+          setImages(response.data);
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
+      } else {
+        try {
+          let response = await axios.get(
+            "https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/randoms"
+          );
+          setImages(response.data);
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
       }
     };
     fetchImages();
-  }, []);
+  }, [selectedLetter]);
 
   // Passing the imageURL to the parent component
   const handleImageClick = (imageUrl) => {
