@@ -23,9 +23,9 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
 
   return (
     <div id="sidebar">
-      <div id="logo">Logo</div>
+      <div id="logo"></div>
       <div id="favorites">
-        <div className="sidebar-section nunito-sans-thin">Favorites</div>
+        <div className="sidebar-section nunito-sans-regular">Favorites</div>
         <ul id="favorites-list" className="sidebar-list">
           {Favorites.map((value, key) => {
             return (
@@ -34,19 +34,20 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
                 id={activeFavorite === value.title ? "active" : ""}
                 key={key}
                 onClick={() => {
-                  setActiveFavorite(value.title);
                   handleFavoriteClick(value.title.toLowerCase());
                 }}
               >
                 <div className="sidebar-icon">{value.icon}</div>
-                <div className="sidebar-title">{value.title}</div>
+                <div className="sidebar-title nunito-sans-regular">
+                  {value.title}
+                </div>
               </li>
             );
           })}
         </ul>
       </div>
       <div id="categories">
-        <div className="sidebar-section nunito-sans-thin">Categories</div>
+        <div className="sidebar-section nunito-sans-regular">Categories</div>
         <ul id="categories-list" className="sidebar-list">
           {Categories.map((value, key) => {
             return (
@@ -55,12 +56,14 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
                 id={activeCategory === value.title ? "active" : ""}
                 key={key}
                 onClick={() => {
-                  setActiveCategory(value.title);
+                  // setActiveCategory(value.title);
                   handleLetterClick(value.title.toLowerCase());
                 }}
               >
                 <div className="sidebar-icon">{value.icon}</div>
-                <div className="sidebar-title">{value.title}</div>
+                <div className="sidebar-title nunito-sans-regular">
+                  {value.title}
+                </div>
               </li>
             );
           })}

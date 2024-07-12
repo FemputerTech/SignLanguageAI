@@ -1,3 +1,4 @@
+import RandomIcon from "../assets/icons/Random.svg";
 import AIcon from "../assets/icons/A.svg";
 import BIcon from "../assets/icons/B.svg";
 import CIcon from "../assets/icons/C.svg";
@@ -29,6 +30,13 @@ export const Favorites = [
   {
     title: "Random",
     icon: "",
+    // icon: (
+    //   <img
+    //     src={RandomIcon}
+    //     alt="Random"
+    //     style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+    //   />
+    // ),
     link: "",
   },
   {
@@ -46,132 +54,288 @@ export const Favorites = [
 export const Categories = [
   {
     title: "A",
-    icon: <img src={AIcon} alt="A" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={AIcon}
+        alt="A"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "B",
-    icon: <img src={BIcon} alt="B" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={BIcon}
+        alt="B"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "C",
-    icon: <img src={CIcon} alt="C" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={CIcon}
+        alt="C"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "D",
-    icon: <img src={DIcon} alt="D" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={DIcon}
+        alt="D"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "E",
-    icon: <img src={EIcon} alt="E" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={EIcon}
+        alt="E"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "F",
-    icon: <img src={FIcon} alt="F" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={FIcon}
+        alt="F"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "G",
-    icon: <img src={GIcon} alt="G" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={GIcon}
+        alt="G"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "H",
-    icon: <img src={HIcon} alt="H" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={HIcon}
+        alt="H"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "I",
-    icon: <img src={IIcon} alt="I" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={IIcon}
+        alt="I"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "J",
-    icon: <img src={JIcon} alt="J" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={JIcon}
+        alt="J"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "K",
-    icon: <img src={KIcon} alt="K" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={KIcon}
+        alt="K"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "L",
-    icon: <img src={LIcon} alt="L" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={LIcon}
+        alt="L"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "M",
-    icon: <img src={MIcon} alt="M" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={MIcon}
+        alt="M"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "N",
-    icon: <img src={NIcon} alt="N" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={NIcon}
+        alt="N"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "O",
-    icon: <img src={OIcon} alt="O" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={OIcon}
+        alt="O"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "P",
-    icon: <img src={PIcon} alt="P" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={PIcon}
+        alt="P"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "Q",
-    icon: <img src={QIcon} alt="Q" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={QIcon}
+        alt="Q"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "R",
-    icon: <img src={RIcon} alt="R" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={RIcon}
+        alt="R"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "S",
-    icon: <img src={SIcon} alt="S" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={SIcon}
+        alt="S"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "T",
-    icon: <img src={TIcon} alt="T" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={TIcon}
+        alt="T"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "U",
-    icon: <img src={UIcon} alt="U" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={UIcon}
+        alt="U"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "V",
-    icon: <img src={VIcon} alt="V" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={VIcon}
+        alt="V"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "W",
-    icon: <img src={WIcon} alt="W" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={WIcon}
+        alt="W"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "X",
-    icon: <img src={XIcon} alt="X" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={XIcon}
+        alt="X"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "Y",
-    icon: <img src={YIcon} alt="Y" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={YIcon}
+        alt="Y"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "Z",
-    icon: <img src={ZIcon} alt="Z" style={{ width: "48px", height: "48px" }} />,
+    icon: (
+      <img
+        src={ZIcon}
+        alt="Z"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
 ];
