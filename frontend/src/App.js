@@ -9,6 +9,7 @@ import Content from "./components/Content";
 function App() {
   const [selectedImageUrl, setSelectedImageUrl] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
+  const [selectedFavorite, setSelectedFavorite] = useState("");
 
   const handleImageClick = (imageUrl) => {
     console.log("handling the image:", imageUrl);
@@ -18,6 +19,11 @@ function App() {
   const handleLetterClick = (letter) => {
     console.log("handling the letter:", letter);
     setSelectedLetter(letter);
+  };
+
+  const handleFavoriteClick = (fav) => {
+    console.log("handling the favorite:", fav);
+    setSelectedFavorite(fav);
   };
 
   return (
@@ -32,12 +38,19 @@ function App() {
       </header>
       <div id="container">
         <div id="sidebar-wrapper">
-          <Sidebar onLetterClick={handleLetterClick} />
+          <Sidebar
+            onLetterClick={handleLetterClick}
+            onFavoriteClick={handleFavoriteClick}
+          />
         </div>
         <div id="main">
           <Navbar />
           <div id="content-wrapper">
-            <Header selectedImageUrl={selectedImageUrl} />
+            <Header
+              selectedImageUrl={selectedImageUrl}
+              setSelectedImageUrl={setSelectedImageUrl}
+              selectedFavorite={selectedFavorite}
+            />
             <Content
               onImageClick={handleImageClick}
               selectedLetter={selectedLetter}

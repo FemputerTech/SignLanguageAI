@@ -3,14 +3,21 @@ import "../styles/Sidebar.css";
 import { Categories, Favorites } from "./SidebarData";
 // import { Scrollbars } from "react-custom-scrollbars-2";
 
-function Sidebar({ onLetterClick }) {
+function Sidebar({ onLetterClick, onFavoriteClick }) {
   const [activeFavorite, setActiveFavorite] = useState("");
   const [activeCategory, setActiveCategory] = useState("");
 
-  // Passing the imageURL to the parent component
+  // Passing the letter to the parent component
   const handleLetterClick = (letter) => {
     if (onLetterClick) {
       onLetterClick(letter);
+    }
+  };
+
+  // Passing the favorite to the parent component
+  const handleFavoriteClick = (fav) => {
+    if (onFavoriteClick) {
+      onFavoriteClick(fav);
     }
   };
 
@@ -28,7 +35,7 @@ function Sidebar({ onLetterClick }) {
                 key={key}
                 onClick={() => {
                   setActiveFavorite(value.title);
-                  // window.location.pathname = value.link;
+                  handleFavoriteClick(value.title.toLowerCase());
                 }}
               >
                 <div className="sidebar-icon">{value.icon}</div>
@@ -48,7 +55,6 @@ function Sidebar({ onLetterClick }) {
                 id={activeCategory === value.title ? "active" : ""}
                 key={key}
                 onClick={() => {
-                  // window.location.pathname = value.link;
                   setActiveCategory(value.title);
                   handleLetterClick(value.title.toLowerCase());
                 }}

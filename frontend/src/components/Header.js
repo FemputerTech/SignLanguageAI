@@ -1,10 +1,25 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../styles/Header.css";
 
-function Header({ selectedImageUrl }) {
+function Header({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
   const [prediction, setPrediction] = useState(null);
   const [confidence, setConfidence] = useState(null);
+  useEffect(() => {
+    const fetchImage = async () => {
+      if (selectedFavorite) {
+        try {
+          let response = await axios.get(
+            `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/${selectedFavorite}`
+          );
+          setSelectedImageUrl(response.data.url);
+        } catch (error) {
+          console.error("Error fetching images:", error);
+        }
+      }
+    };
+    fetchImage();
+  }, [selectedFavorite, setSelectedImageUrl]);
 
   const sendImage = async () => {
     try {
