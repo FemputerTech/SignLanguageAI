@@ -25,7 +25,7 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
     <div id="sidebar">
       <div id="logo">Logo</div>
       <div id="favorites">
-        <div className="sidebar-section">Favorites</div>
+        <div className="sidebar-section nunito-sans-thin">Favorites</div>
         <ul id="favorites-list" className="sidebar-list">
           {Favorites.map((value, key) => {
             return (
@@ -46,7 +46,7 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
         </ul>
       </div>
       <div id="categories">
-        <div className="sidebar-section">Categories</div>
+        <div className="sidebar-section nunito-sans-thin">Categories</div>
         <ul id="categories-list" className="sidebar-list">
           {Categories.map((value, key) => {
             return (
