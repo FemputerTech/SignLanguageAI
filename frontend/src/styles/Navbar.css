@@ -1,38 +1,28 @@
-:root {
-  --navbar-background-color: #9e9e9e;
-}
-
 nav {
+  position: fixed;
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   background-color: var(--navbar-background-color);
-  height: 50px;
+  height: var(--navbar-height);
+  left: var(--sidebar-width);
+  right: 0;
 }
 
 nav #search {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 10px;
-  width: 100%;
+  padding: 0 20px;
 }
 
 nav #search:hover {
-  color: purple;
+  color: var(--navbar-search-hover);
 }
 
 nav ul {
   display: flex;
   justify-content: flex-end;
-  align-items: center;
   list-style-type: none;
   flex: 1;
   padding: 0;
-  height: 100%;
-}
-
-nav ul li {
-  display: inline-block;
   height: 100%;
 }
 
@@ -41,13 +31,12 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: black;
-  padding-left: 20px;
-  padding-right: 20px;
+  color: var(--text-color);
+  padding: 0 20px;
   width: 100%;
   height: 100%;
 }
 
 nav ul li a:hover {
-  background-color: darkgray;
+  background-color: var(--navbar-link-hover);
 }

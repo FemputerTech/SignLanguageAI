@@ -1,14 +1,3 @@
-:root {
-  /* Light Mode */
-  --sidebar-background-color: #dae3d9;
-  --sidebar-width: 200px;
-  --sidebar-border: 1px solid #b3bab3;
-  --sidebar-logo-height: 70px;
-  --sidebar-item-height: 48px;
-  --sidebar-background-color-hover: #cad1c9;
-  --sidebar-active: #b3bab3;
-}
-
 #sidebar {
   position: fixed;
   background-color: var(--sidebar-background-color);

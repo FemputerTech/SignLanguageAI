@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Helmet } from "react-helmet";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
-import Header from "./components/Header";
+import Preview from "./components/Preview";
 import Content from "./components/Content";
 
 function App() {
@@ -41,20 +41,18 @@ function App() {
           onLetterClick={handleLetterClick}
           onFavoriteClick={handleFavoriteClick}
         />
-        {/* <div id="main">
+        <div id="main-content">
           <Navbar />
-          <div id="content-wrapper">
-            <Header
-              selectedImageUrl={selectedImageUrl}
-              setSelectedImageUrl={setSelectedImageUrl}
-              selectedFavorite={selectedFavorite}
-            />
-            <Content
-              onImageClick={handleImageClick}
-              selectedLetter={selectedLetter}
-            />
-          </div>
-        </div> */}
+          <Preview
+            selectedImageUrl={selectedImageUrl}
+            setSelectedImageUrl={setSelectedImageUrl}
+            selectedFavorite={selectedFavorite}
+          />
+          <Content
+            onImageClick={handleImageClick}
+            selectedLetter={selectedLetter}
+          />
+        </div>
       </div>
     </div>
   );

@@ -1,3 +1,34 @@
+:root {
+  --text-color: black;
+
+  /* Sidebar */
+  --sidebar-background-color: #dae3d9;
+  --sidebar-width: 200px;
+  --sidebar-border: 1px solid #b3bab3;
+  --sidebar-logo-height: 70px;
+  --sidebar-item-height: 48px;
+  --sidebar-background-color-hover: #cad1c9;
+  --sidebar-active: #b3bab3;
+
+  /* Navbar */
+  --navbar-background-color: #9e9e9e;
+  --navbar-height: 50px;
+  --navbar-search-hover: green;
+  --navbar-link-hover: darkgray;
+
+  /* Preview */
+  --preview-background-color: #cecece;
+  --preview-height: 350px;
+
+  /* Content */
+  --content-background-color: #ececec;
+
+  /* Cards */
+  --card-background-color: #838383;
+  --card-width: 200px;
+  --card-height: 200px;
+}
+
 * {
   box-sizing: border-box;
   /* font-family: "Courier New", Courier, monospace; */
@@ -62,17 +93,13 @@ body {
 /************ Layout ************/
 #container {
   display: flex;
+  width: 100%;
   height: 100%;
 }
 
-#main {
-  display: flex;
+#main-content {
   flex-direction: column;
   flex: 1; /* take up remaining space */
-  width: 100%;
-}
-
-#content-wrapper {
-  display: flex;
-  flex-direction: column;
+  margin-left: var(--sidebar-width);
+  height: 100%;
 }

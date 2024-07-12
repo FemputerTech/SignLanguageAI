@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { saveAs } from "file-saver";
 import axios from "axios";
 import "../styles/Content.css";
 
@@ -38,27 +37,6 @@ function Content({ onImageClick, selectedLetter }) {
       onImageClick(imageUrl);
     }
   };
-
-  // const downloadImage = async (imageUrl, filename = "tmp_image.png") => {
-  //   try {
-  //     const response = await axios.get(
-  //       `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/download-image?image_url=${encodeURIComponent(
-  //         imageUrl
-  //       )}`,
-  //       {
-  //         responseType: "blob", // Important: responseType as blob
-  //       }
-  //     );
-
-  //     if (!response.data) {
-  //       throw new Error(`Empty response received`);
-  //     }
-
-  //     saveAs(response.data, filename);
-  //   } catch (error) {
-  //     console.error("Error downloading image:", error);
-  //   }
-  // };
 
   return (
     <div id="content">
