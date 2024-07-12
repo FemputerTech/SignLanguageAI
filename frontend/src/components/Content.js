@@ -36,6 +36,10 @@ function Content({ onImageClick, selectedLetter }) {
     if (onImageClick) {
       onImageClick(imageUrl);
     }
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
 
   return (
