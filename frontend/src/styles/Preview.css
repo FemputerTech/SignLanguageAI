@@ -1,0 +1,11 @@
+#preview {
+  background-color: var(--preview-background-color);
+  padding: 20px;
+  margin-top: var(--navbar-height);
+  height: var(--preview-height);
+}
+
+.selected-image {
+  width: var(--card-width);
+  height: var(--card-height);
+}
