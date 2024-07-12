@@ -40,7 +40,7 @@ function Content({ onImageClick, selectedLetter }) {
 
   return (
     <div id="content">
-      <h1 id="content-title">Content</h1>
+      {/* <h1 id="content-title">Content</h1> */}
       <div className="card-container">
         {images.map((image, index) => (
           <article
