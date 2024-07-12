@@ -1,6 +1,5 @@
 #preview {
   display: flex;
-  background-color: var(--preview-background-color);
   padding: 20px 50px;
   margin-top: var(--navbar-height);
   height: var(--preview-height);

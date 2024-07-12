@@ -1,5 +1,5 @@
 #content {
-  background-color: var(--content-background-color);
+  padding: 20px 50px;
 }
 
 #content-title {
@@ -20,9 +20,16 @@
 .card {
   background-color: var(--card-background-color);
   border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: zoom-in;
+  transition: transform 0.2s;
   overflow: hidden;
   width: var(--card-width);
   height: var(--card-height);
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
 
 .card-title {

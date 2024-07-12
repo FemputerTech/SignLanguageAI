@@ -10,10 +10,14 @@ function Navbar() {
       </div>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a className="nav-link nunito-sans-semibold" href="/">
+            Home
+          </a>
         </li>
         <li>
-          <a href="/">Index</a>
+          <a className="nav-link nunito-sans-semibold" href="/">
+            Index
+          </a>
         </li>
       </ul>
     </nav>
