@@ -42,17 +42,19 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
         src={selectedImageUrl}
         alt="Selected asl letter"
       />
-      {/* <button id="predict-button" onClick={() => sendImage()}>
-        Predict
-      </button>
-      <p>Prediction</p>
-      <p>
-        <span id="prediction">{prediction}</span>
-      </p>
-      <p>Confidence</p>
-      <p>
-        <span id="confidence">{confidence}</span>
-      </p> */}
+      <div id="prediction-section">
+        <button id="predict-button" onClick={() => sendImage()}>
+          Predict
+        </button>
+        <p>Prediction</p>
+        <p>
+          <span id="prediction">{prediction}</span>
+        </p>
+        <p>Confidence</p>
+        <p>
+          <span id="confidence">{confidence}</span>
+        </p>
+      </div>
     </div>
   );
 }
