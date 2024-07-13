@@ -1,4 +1,6 @@
 import RandomIcon from "../assets/icons/Random.svg";
+import VowelIcon from "../assets/icons/Vowel.svg";
+import ConsonantIcon from "../assets/icons/Consonant.svg";
 import AIcon from "../assets/icons/A.svg";
 import BIcon from "../assets/icons/B.svg";
 import CIcon from "../assets/icons/C.svg";
@@ -29,24 +31,35 @@ import ZIcon from "../assets/icons/Z.svg";
 export const Favorites = [
   {
     title: "Random",
-    icon: "",
-    // icon: (
-    //   <img
-    //     src={RandomIcon}
-    //     alt="Random"
-    //     style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
-    //   />
-    // ),
+    icon: (
+      <img
+        src={RandomIcon}
+        alt="Random"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "Vowel",
-    icon: "",
+    icon: (
+      <img
+        src={VowelIcon}
+        alt="Vowel"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
   {
     title: "Consonant",
-    icon: "",
+    icon: (
+      <img
+        src={ConsonantIcon}
+        alt="Consonant"
+        style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
+      />
+    ),
     link: "",
   },
 ];
