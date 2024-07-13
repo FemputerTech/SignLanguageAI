@@ -6,7 +6,7 @@ function Navbar() {
   return (
     <nav>
       <div id="mode">
-        <img class="mode-image" src={Dark} alt="Switch to dark mode" />
+        <img className="mode-image" src={Dark} alt="Switch to dark mode" />
       </div>
       <ul>
         <li>
