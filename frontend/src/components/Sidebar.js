@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import "../styles/Sidebar.css";
 import { Categories, Favorites } from "./SidebarData";
+import Logo from "../assets/logo.svg";
 // import { Scrollbars } from "react-custom-scrollbars-2";
+import "../styles/Sidebar.css";
 
 function Sidebar({ onLetterClick, onFavoriteClick }) {
-  const [activeFavorite, setActiveFavorite] = useState("");
+  // const [activeFavorite, setActiveFavorite] = useState("");
   const [activeCategory, setActiveCategory] = useState("");
 
   // Passing the letter to the parent component
@@ -23,7 +24,9 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
 
   return (
     <div id="sidebar">
-      <div id="logo"></div>
+      <div id="logo">
+        <img src={Logo} style={{ width: "110px" }} alt="logo" />
+      </div>
       <div id="favorites">
         <div className="sidebar-section nunito-sans-regular">Favorites</div>
         <ul id="favorites-list" className="sidebar-list">
@@ -31,7 +34,7 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
             return (
               <li
                 className="item"
-                id={activeFavorite === value.title ? "active" : ""}
+                // id={activeFavorite === value.title ? "active" : ""}
                 key={key}
                 onClick={() => {
                   handleFavoriteClick(value.title.toLowerCase());
