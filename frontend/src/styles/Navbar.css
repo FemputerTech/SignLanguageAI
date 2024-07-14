@@ -3,7 +3,7 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--navbar-background-color);
+  background-color: var(--background-secondary);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   height: var(--navbar-height);
   left: var(--sidebar-width);
@@ -39,17 +39,16 @@ nav ul li a {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: var(--text-color);
   padding: 0 20px;
   width: 100%;
   height: 100%;
 }
 
 .nav-link {
-  color: #e8e8e8;
+  color: var(--text-normal-secondary);
 }
 
 nav ul li a:hover {
   background-color: var(--navbar-link-hover);
-  color: #d6d6d6;
+  color: var(--text-accent);
 }

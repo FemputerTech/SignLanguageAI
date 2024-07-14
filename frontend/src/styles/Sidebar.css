@@ -1,6 +1,6 @@
 #sidebar {
   position: fixed;
-  background-color: var(--sidebar-background-color);
+  background-color: var(--background-primary-alt);
   overflow-y: auto;
   width: var(--sidebar-width);
   height: 100%;
@@ -12,14 +12,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-bottom: var(--sidebar-border);
+  border-bottom: 1px solid var(--dividers);
+  object-fit: cover;
+  overflow: hidden;
   padding: 20px;
   width: 100%;
   height: var(--sidebar-logo-height);
 }
 
 #favorites {
-  border-bottom: var(--sidebar-border);
+  border-bottom: 1px solid var(--dividers);
   width: 100%;
 }
 
@@ -28,7 +30,7 @@
 }
 
 .sidebar-section {
-  color: var(--sidebar-section-color);
+  color: var(--text-faint);
   font-size: 12px;
   margin: 20px 10px;
 }
@@ -56,16 +58,16 @@
 }
 
 .sidebar-list .item .sidebar-title {
-  color: var(--sidebar-text-color);
+  color: var(--text-muted);
   font-size: 14px;
   margin-right: 20px;
 }
 
 .sidebar-list .item:hover {
   cursor: pointer;
-  background-color: var(--sidebar-background-color-hover);
+  background-color: var(--interactive-hover);
 }
 
 .sidebar-list #active {
-  background-color: var(--sidebar-active);
+  background-color: var(--interactive-active);
 }
