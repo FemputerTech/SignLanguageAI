@@ -19,8 +19,6 @@ function Content({ onImageClick, selectedLetter }) {
           );
         }
         setImages(response.data);
-        /** setting the preview with the first image */
-        // handleImageClick(response.data[0].url);
       } catch (error) {
         console.error("Error fetching images:", error);
       }
