@@ -57,11 +57,17 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
 
   return (
     <div id="preview">
-      <img
-        className="selected-image"
-        src={selectedImageUrl}
-        alt="Selected asl letter"
-      />
+      <div id="image-preview">
+        {selectedImageUrl ? (
+          <img
+            className="selected-image"
+            src={selectedImageUrl}
+            aria-label="Selected asl letter"
+          />
+        ) : (
+          <div className="no-image">Select an image</div>
+        )}
+      </div>
       <div id="intro-section">
         <div id="title-section">
           <h1>

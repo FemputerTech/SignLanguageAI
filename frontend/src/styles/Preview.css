@@ -5,6 +5,7 @@
   height: var(--preview-height);
 }
 
+.no-image,
 .selected-image {
   background-color: var(--background-primary-alt);
   border-radius: 20px;
@@ -13,6 +14,13 @@
   object-position: 50% 80%;
   width: 500px;
   height: var(--image-size);
+}
+
+.no-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-faint);
 }
 
 #intro-section {
