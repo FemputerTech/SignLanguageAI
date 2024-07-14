@@ -47,7 +47,6 @@ function Content({ onImageClick, selectedLetter }) {
 
   return (
     <div id="content">
-      {/* <h1 id="content-title">Content</h1> */}
       <div className="card-container">
         {images.map((image, index) => (
           <article
@@ -58,7 +57,7 @@ function Content({ onImageClick, selectedLetter }) {
             <img
               className="card-image"
               src={image.url}
-              alt={`Signed letter ${image.letter}`}
+              alt={`Signed letter for ${image.letter} number ${index}`}
             />
           </article>
         ))}

@@ -34,7 +34,7 @@ export const Favorites = [
     icon: (
       <img
         src={RandomIcon}
-        alt="Random"
+        alt="Generate a random letter"
         style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
       />
     ),
@@ -45,7 +45,7 @@ export const Favorites = [
     icon: (
       <img
         src={VowelIcon}
-        alt="Vowel"
+        alt="Generate a vowel"
         style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
       />
     ),
@@ -56,7 +56,7 @@ export const Favorites = [
     icon: (
       <img
         src={ConsonantIcon}
-        alt="Consonant"
+        alt="Generate a consonant"
         style={{ width: "var(--icon-size)", height: "var(--icon-size)" }}
       />
     ),
