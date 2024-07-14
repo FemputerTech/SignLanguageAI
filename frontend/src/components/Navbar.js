@@ -14,11 +14,6 @@ function Navbar() {
             Home
           </a>
         </li>
-        <li>
-          <a className="nav-link nunito-sans-semibold" href="/">
-            Index
-          </a>
-        </li>
       </ul>
     </nav>
   );
