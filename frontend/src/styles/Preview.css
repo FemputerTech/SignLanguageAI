@@ -1,7 +1,7 @@
 #preview {
   display: flex;
-  padding: 20px 50px;
-  margin-top: var(--navbar-height);
+  padding: 30px 50px;
+  /* margin-top: var(--navbar-height); */
   height: var(--preview-height);
 }
 
