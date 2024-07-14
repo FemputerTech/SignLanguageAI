@@ -26,7 +26,7 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
         <img src={Logo} style={{ width: "110px" }} alt="Sign AI" />
       </div>
       <div id="favorites">
-        <div className="sidebar-section nunito-sans-regular">Favorites</div>
+        <div className="sidebar-section">Favorites</div>
         <ul id="favorites-list" className="sidebar-list">
           {Favorites.map((value, key) => {
             return (
@@ -38,16 +38,14 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
                 }}
               >
                 <div className="sidebar-icon">{value.icon}</div>
-                <div className="sidebar-title nunito-sans-regular">
-                  {value.title}
-                </div>
+                <div className="sidebar-title">{value.title}</div>
               </li>
             );
           })}
         </ul>
       </div>
       <div id="categories">
-        <div className="sidebar-section nunito-sans-regular">Categories</div>
+        <div className="sidebar-section">Categories</div>
         <ul id="categories-list" className="sidebar-list">
           {Categories.map((value, key) => {
             return (
@@ -61,9 +59,7 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
                 }}
               >
                 <div className="sidebar-icon">{value.icon}</div>
-                <div className="sidebar-title nunito-sans-regular">
-                  {value.title}
-                </div>
+                <div className="sidebar-title">{value.title}</div>
               </li>
             );
           })}

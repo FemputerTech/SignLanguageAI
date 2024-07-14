@@ -10,9 +10,7 @@ function Navbar() {
       </div>
       <ul>
         <li>
-          <a className="nav-link nunito-sans-semibold" href="/">
-            Home
-          </a>
+          <a href="/">Home</a>
         </li>
       </ul>
     </nav>
