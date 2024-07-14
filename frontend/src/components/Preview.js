@@ -5,6 +5,7 @@ import "../styles/Preview.css";
 function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
   const [prediction, setPrediction] = useState(null);
   const [confidence, setConfidence] = useState(null);
+
   useEffect(() => {
     const fetchImage = async () => {
       if (selectedFavorite) {

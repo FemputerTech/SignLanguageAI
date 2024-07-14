@@ -7,28 +7,22 @@ function Content({ onImageClick, selectedLetter }) {
 
   useEffect(() => {
     const fetchImages = async () => {
-      if (selectedLetter) {
-        try {
-          let response = await axios.get(
+      let response;
+      try {
+        if (selectedLetter) {
+          response = await axios.get(
             `https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/${selectedLetter}`
           );
-          setImages(response.data);
-          /** setting the preview with the first image */
-          handleImageClick(response.data[0].url);
-        } catch (error) {
-          console.error("Error fetching images:", error);
-        }
-      } else {
-        try {
-          let response = await axios.get(
+        } else {
+          response = await axios.get(
             "https://us-west1-cloud-signlanguage-leicht.cloudfunctions.net/asl-alphabet/randoms"
           );
-          setImages(response.data);
-          /** setting the preview with the first image */
-          handleImageClick(response.data[0].url);
-        } catch (error) {
-          console.error("Error fetching images:", error);
         }
+        setImages(response.data);
+        /** setting the preview with the first image */
+        // handleImageClick(response.data[0].url);
+      } catch (error) {
+        console.error("Error fetching images:", error);
       }
     };
     fetchImages();
