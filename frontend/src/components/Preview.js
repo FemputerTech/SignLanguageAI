@@ -43,7 +43,11 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
         alt="Selected asl letter"
       />
       <div id="prediction-section">
-        <button id="predict-button" onClick={() => sendImage()}>
+        <button
+          className="nunito-sans-semibold"
+          id="predict-button"
+          onClick={() => sendImage()}
+        >
           Predict
         </button>
         <p>Prediction</p>
