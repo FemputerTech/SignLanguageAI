@@ -1,4 +1,4 @@
-# jUse Google Cloud SDK's container as the base image
+# Use Google Cloud SDK's container as the base image
 FROM google/cloud-sdk
 
 # Specify my e-mail address as the maintainer of the container image

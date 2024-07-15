@@ -14,11 +14,12 @@ I used a template from [codebasics](https://github.com/codebasics/potato-disease
 
 ## Setup Python Virtual Environment and Dependencies
 
-1. Install the virtual environment `python3.11 -m venv .env`
-2. Activate the environment in your shell `source .env/bin/activate`
-3. Verify the python version `python3 --version`
-4. Install dependencies `pip3 install -r requirements.txt`
-5. Select the python interpreter for the virtual environment and select it in the jupyter notebook (top right side)
+1. cd into the backend
+2. Install the virtual environment `python3.11 -m venv .env`
+3. Activate the environment in your shell `source .env/bin/activate`
+4. Verify the python version `python3 --version`
+5. Install dependencies `pip3 install -r requirements.txt`
+6. Select the python interpreter for the virtual environment and select it in the jupyter notebook (top right side)
 
 ## Setup Kaggle
 
@@ -40,3 +41,7 @@ I used a template from [codebasics](https://github.com/codebasics/potato-disease
 ### Changing the website title
 
 Install react-helmet by running `npm install --save react-helmet`
+
+## Setting up GCP Project
+
+### Build Containers
