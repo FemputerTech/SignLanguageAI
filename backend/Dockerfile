@@ -14,4 +14,4 @@ COPY . /app
 RUN apt update -y && apt install -y python3-pip && pip3 install -r requirements.txt
 
 # Set the parameters to the program
-CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8080"]
