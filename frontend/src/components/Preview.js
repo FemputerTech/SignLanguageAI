@@ -38,10 +38,11 @@ function Preview({ selectedImageUrl, setSelectedImageUrl, selectedFavorite }) {
     }
     setIsThinking(true);
     try {
+      console.log("env:", process.env.REACT_APP_FASTAPI_URL);
       let response = await axios.post(
-        `http://localhost:8000/predict?image_url=${encodeURIComponent(
-          selectedImageUrl
-        )}`
+        `${
+          process.env.REACT_APP_FASTAPI_URL
+        }/predict?image_url=${encodeURIComponent(selectedImageUrl)}`
       );
       console.log("Response:", response.data);
       setPrediction(response.data.class);
