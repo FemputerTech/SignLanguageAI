@@ -12,7 +12,8 @@ app = FastAPI()
 
 # Configure CORS
 origins = [
-    "http://localhost:3000",  # React frontend URL
+    "http://localhost:3000",  # Local React frontend URL
+    "https://signai-rqc3nken5a-uw.a.run.app" # Deployed React frontend URL
 ]
 app.add_middleware(
     CORSMiddleware,
@@ -28,9 +29,9 @@ MODEL = tf.keras.models.load_model(PATH)
 CLASS_NAMES = ['A', 'B', 'Blank', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'Space', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 
 # API GET endpoint
-@app.get("/ping")
-async def ping():
-    return "It's aliiiiive!!"
+@app.get("/")
+async def index():
+    return {"details":"It's aliiiiive!!"}
 
 def preprocess_image(image, target_size):
     if image.mode != "RGB":
@@ -93,4 +94,4 @@ async def predict(image_url: str):
 
 # Run the application
 if __name__ == '__main__':
-    uvicorn.run(app, host='localhost', port=8000)
+    uvicorn.run(app, host='0.0.0.0', port=8000)
