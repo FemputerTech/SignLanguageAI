@@ -9,7 +9,7 @@
 .selected-image {
   background-color: var(--background-primary-alt);
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   object-fit: cover;
   object-position: 50% 80%;
   width: 500px;
@@ -37,12 +37,12 @@
 #predict-button {
   display: flex;
   justify-content: flex-start;
-  color: var(--text-normal);
+  color: var(--text-normal-alt);
   letter-spacing: 1px;
   background-color: var(--primary);
   border: none;
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   cursor: pointer;
   font-weight: 600;
   padding: 10px 30px;

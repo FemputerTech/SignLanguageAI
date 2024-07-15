@@ -1,5 +1,5 @@
 import "./App.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Helmet } from "react-helmet";
 import Sidebar from "./components/Sidebar";
 import Navbar from "./components/Navbar";
@@ -7,9 +7,15 @@ import Preview from "./components/Preview";
 import Content from "./components/Content";
 
 function App() {
+  const [mode, setMode] = useState("light");
   const [selectedImageUrl, setSelectedImageUrl] = useState("");
   const [selectedLetter, setSelectedLetter] = useState("");
   const [selectedFavorite, setSelectedFavorite] = useState("");
+
+  const toggleMode = () => {
+    const newMode = mode === "light" ? "dark" : "light";
+    setMode(newMode);
+  };
 
   const handleImageClick = (imageUrl) => {
     console.log("handling the image:", imageUrl);
@@ -26,6 +32,10 @@ function App() {
     setSelectedFavorite(fav);
   };
 
+  useEffect(() => {
+    document.documentElement.className = mode;
+  }, [mode]);
+
   return (
     <div className="App">
       <header className="App-header">
@@ -40,9 +50,10 @@ function App() {
         <Sidebar
           onLetterClick={handleLetterClick}
           onFavoriteClick={handleFavoriteClick}
+          mode={mode}
         />
         <div id="main-content">
-          <Navbar />
+          <Navbar mode={mode} toggleMode={toggleMode} />
           <Preview
             selectedImageUrl={selectedImageUrl}
             setSelectedImageUrl={setSelectedImageUrl}

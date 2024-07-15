@@ -2,5 +2,5 @@
 <mask id="path-1-inside-1_21_64" fill="white">
 <rect x="282" y="282" width="300" height="300" rx="20"/>
 </mask>
-<rect x="282" y="282" width="300" height="300" rx="20" stroke="#424344" stroke-width="48" mask="url(#path-1-inside-1_21_64)"/>
+<rect x="282" y="282" width="300" height="300" rx="20" stroke="#7f7f7f" stroke-width="48" mask="url(#path-1-inside-1_21_64)"/>
 </svg>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { Categories, Favorites } from "./SidebarData";
-import Logo from "../assets/Logo.svg";
+import LogoLight from "../assets/logos/Logo-light.svg";
+import LogoDark from "../assets/logos/Logo-dark.svg";
 import "../styles/Sidebar.css";
 
-function Sidebar({ onLetterClick, onFavoriteClick }) {
+function Sidebar({ onLetterClick, onFavoriteClick, mode }) {
   const [activeCategory, setActiveCategory] = useState("");
 
   // Passing the letter to the parent component
@@ -23,7 +24,11 @@ function Sidebar({ onLetterClick, onFavoriteClick }) {
   return (
     <div id="sidebar">
       <div id="logo">
-        <img src={Logo} style={{ width: "110px" }} alt="Sign AI" />
+        <img
+          src={mode === "dark" ? LogoDark : LogoLight}
+          style={{ width: "110px" }}
+          alt="Sign AI"
+        />
       </div>
       <div id="favorites">
         <div className="sidebar-section">Favorites</div>

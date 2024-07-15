@@ -20,7 +20,7 @@
 .card {
   background-color: var(--card-background-color);
   border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   cursor: zoom-in;
   transition: transform 0.2s;
   overflow: hidden;
